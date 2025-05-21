@@ -1,0 +1,185 @@
+/* font navbar */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* variabel color */
+:root {
+    --color-blue: #0774FA;
+    --dark-grey: #414142;
+    --blue-link: #0774FA;
+    --light-lavender: #F0EAFF;
+    --color-pink: #FFF6F6;
+}
+
+
+
+header .container-fluid .navbar .container-fluid .brand-nemolab-icon .title-navbar-brand p {
+    color: var(--dark-grey);
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.2;
+    background-color: transparent !important;
+}
+
+header .container-fluid .navbar .container-fluid .brand-nemolab-icon .title-navbar-brand p:first-child {
+    font-size: 20px;
+    font-weight: 600 !important;
+}
+
+header .container-fluid .navbar .container-fluid .brand-nemolab-icon .title-navbar-brand p:last-child {
+    font-size: 14px;
+}
+
+header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:first-child .search-group {
+    background-color: var(--color-pink);
+    padding: 10px 20px;
+    width: max-content;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header #navbarNavAltMarkup .navbar-nav:last-child .dropdown button,
+header #navbarNavAltMarkup .profile-auth .dropdown button {
+    color: var(--dark-grey) !important;
+    background: none;
+    outline: none;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px !important;
+    background-color: transparent !important;
+    font-weight: 600 !important;
+}
+
+header #navbarNavAltMarkup .navbar-nav a {
+    color: var(--dark-grey) !important;
+    background: none;
+    outline: none;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px !important;
+    background-color: transparent !important;
+    font-weight: 600 !important;
+}
+
+header #navbarNavAltMarkup .navbar-nav a:hover,
+header #navbarNavAltMarkup .navbar-nav a.active {
+    color: var(--blue-link) !important;
+}
+
+
+header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown button.dropdown-toggle::after,
+header #navbarNavAltMarkup .profile-auth .dropdown button.dropdown-toggle::after {
+    display: none;
+}
+
+header .container-fluid .navbar-toggler {
+    background-color: var(--color-blue);
+    border: none;
+    padding: 5px !important;
+}
+
+header .container-fluid .navbar-toggler img {
+    width: 20px;
+    height: 20px;
+}
+
+
+header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu {
+    width: max-content;
+    padding: 10px;
+}
+
+header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu {
+    width: 380px;
+    padding: 14px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu .content-submenu a:hover {
+    color: var(--blue-link);
+}
+
+header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .register-login a {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    width: max-content;
+}
+
+header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .register-login a.btn-secondary {
+    background-color: var(--light-lavender) !important;
+    border: var(--light-lavender) !important;
+    color: black;
+}
+
+
+@media screen and (max-width: 992px) {
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu {
+        position: absolute !important;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 576px) {
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown button,
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child>a {
+        font-size: 16px !important;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .register-login a {
+        font-size: 16px !important;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu {
+        width: 100%;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu .head-submenu p,
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu .head-submenu a {
+        font-size: 18px !important;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu .content-submenu a {
+        font-size: 16px !important;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav {
+        padding-left: 0 !important;
+        margin-top: 4px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav {
+        padding-left: 0 !important;
+        margin-top: 4px;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown button,
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child>a {
+        font-size: 16px !important;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .register-login a {
+        font-size: 16px !important;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu {
+        width: 100%;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu .head-submenu p,
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu .head-submenu a {
+        font-size: 16px !important;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu .content-submenu a {
+        font-size: 14px !important;
+    }
+
+    header .container-fluid .navbar .container-fluid #navbarNavAltMarkup .navbar-nav:last-child .dropdown .dropdown-menu .head-submenu a {
+        display: none !important;
+    }
+}

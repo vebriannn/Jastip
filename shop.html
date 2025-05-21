@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="" type="image/x-icon" />
+    <title>Titip Aja - Shop</title>
+    <!-- boostrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <link rel="stylesheet" href="assets/css/sidebar-filter.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
+
+</head>
+
+<body>
+    <header class="ps-3 pe-3 pt-2 pb-2 w-100 fixed-top position-fixed bg-white">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg bg-transparent">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center">
+                        <a href="index.html" style="text-decoration: none;">
+                            <div class="brand-nemolab-icon d-flex align-items-center">
+                                <div class="title-navbar-brand ms-2 d-block">
+                                    <h2 class="m-0 p-0 fw-bold">Titip.Aja</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="">
+                            <img src="assets/img/icon-nav.png" alt="">
+                        </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <ul class="navbar-nav d-lg-flex align-items-lg-center gap-lg-5 ps-xl-5 mx-lg-auto">
+                            <a href="index.html#section-hero-img"
+                                class="text-decoration-none pb-1 ms-3 mt-3 ms-lg-0 mt-lg-0 pb-lg-0">Home</a>
+                            <a href="#" class="text-decoration-none pb-1 ms-3 ms-lg-0 pb-lg-0 active">Produk</a>
+                            <a href="index.html#section-pilih-kursus"
+                                class="text-decoration-none pb-1 ms-3 ms-lg-0 pb-lg-0">Keunggulan</a>
+                            <a href="index.html#section-testimoni-kelas"
+                                class="text-decoration-none pb-1 ms-3 ms-lg-0 pb-lg-0">Testimonial</a>
+                        </ul>
+                        <div class="profile-auth mr-lg-auto d-none">
+                            <div class="dropdown d-flex justify-content-end">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown">
+                                    <span class="fw-bold">
+                                        Devita
+                                    </span>
+                                    <img width="48" height="48"
+                                        src="https://img.icons8.com/color/48/circled-user-female-skin-type-1-2--v1.png"
+                                        alt="circled-user-female-skin-type-1-2--v1" />
+                                    <!-- <img width="48" height="48" src="https://img.icons8.com/color/48/circled-user-male-skin-type-1-2--v1.png" alt="circled-user-male-skin-type-1-2--v1"/> -->
+                                </button>
+
+                                <ul class="dropdown-menu w-100 mt-2 dropdown-logout">
+                                    <li><a class="dropdown-item" href="{{ route('member.transaction') }}">Transaksi
+                                            Saya</a></li>
+                                    <li class="border-bottom pb-3"><a class="dropdown-item" href="">Pengaturan</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a class="dropdown-item" href="" id="logout-btn">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="register-login d-flex align-items-center justify-content-end gap-3 ">
+                            <a href="" class="btn px-4 py-2">Daftar</a>
+                            <a href="" class="btn btn-primary px-4 py-2">Masuk</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+        <section class="section-pilh-kelas" id="section-pilih-kelas">
+            <div class="container-fluid mt-5 pt-5">
+
+                <!-- Filter & Produk Section -->
+                <div class="row">
+                    <!-- SIDEBAR (DESKTOP ONLY) -->
+                    <div class="col-md-3 p-0 d-none d-lg-block sidebar bg-transparent shadow-none">
+                        <div class="ms-3 position-fixed">
+                            <div class="sidebar">
+                                <div class="filter-kelas">
+                                    <div class="filter-header text-center">
+                                        <h5 class="fw-bold">Cari Produk</h5>
+                                    </div>
+                                    <hr>
+                                    <form action="" method="GET">
+                                        <input type="text" name="search" class="form-control mb-3"
+                                            placeholder="Cari Produk">
+                                    </form>
+
+                                    <div class="filter-header text-center mt-4">
+                                        <h5 class="fw-bold">Kategori Produk</h5>
+                                    </div>
+                                    <hr>
+                                    <form action="" method="GET">
+                                        <ul class="list-unstyled ps-1">
+                                            <li>
+                                                <input id="semua" name="filter" value="semua" type="radio" checked>
+                                                <label for="semua">Semua</label>
+                                            </li>
+                                            <li>
+                                                <input id="makanan" name="filter" value="makanan" type="radio">
+                                                <label for="makanan">Makanan</label>
+                                            </li>
+                                            <li>
+                                                <input id="minuman" name="filter" value="minuman" type="radio">
+                                                <label for="minuman">Minuman</label>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FILTER & SEARCH BAR MOBILE (BOTTOM FIXED) -->
+                    <div class="d-lg-none fixed-bottom bg-white p-3 shadow border-top">
+                        <div class="d-flex justify-content-between align-items-center gap-2">
+                            <input type="text" class="form-control" placeholder="Cari produk...">
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#filterModal">
+                                <i class="bi bi-funnel-fill me-1"></i> Filter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- KARTU PRODUK -->
+                    <div class="col-md-9 mt-nd-5 mt-md-0" id="course-card">
+                        <div class="card-container">
+                            <div class="row">
+                                <!-- kartu produk seperti yang kamu punya -->
+                                <div class="col-md-4 col-12 d-flex justify-content-center my-1 pb-3">
+                                    <div class="card d-flex" id="card-hover">
+                                        <div class="card-head">
+                                            <img src="https://asset.kompas.com/crops/0D_xhh7m44sOuoVsEPwzj2VB440=/0x12:1000x679/1200x800/data/photo/2020/04/14/5e9573bc5d2d0.jpg"
+                                                class="card-img-top" alt="" />
+                                            <p id="card-category">Makanan</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="title-card">
+                                                <h5 class="fw-bold truncate-text">Rempeyek</h5>
+                                                <p class="subtitle-card" data-fulltext="Tidak Ada Deskripsi Produk"></p>
+                                            </div>
+                                            <div class="btn-group-harga d-flex justify-content-between mt-md-3">
+                                                <div class="harga">
+                                                    <p class="p-0 fw-semibold float-end mt-2 mb-0 price">Rp. 10,000</p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn btn-warning btn-harga mt-3">Titip Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 d-flex justify-content-center my-1 pb-3">
+                                    <div class="card d-flex" id="card-hover">
+                                        <div class="card-head">
+                                            <img src="https://asset.kompas.com/crops/0D_xhh7m44sOuoVsEPwzj2VB440=/0x12:1000x679/1200x800/data/photo/2020/04/14/5e9573bc5d2d0.jpg"
+                                                class="card-img-top" alt="" />
+                                            <p id="card-category">Makanan</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="title-card">
+                                                <h5 class="fw-bold truncate-text">Rempeyek</h5>
+                                                <p class="subtitle-card" data-fulltext="Tidak Ada Deskripsi Produk"></p>
+                                            </div>
+                                            <div class="btn-group-harga d-flex justify-content-between mt-md-3">
+                                                <div class="harga">
+                                                    <p class="p-0 fw-semibold float-end mt-2 mb-0 price">Rp. 10,000</p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn btn-warning btn-harga mt-3">Titip Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 d-flex justify-content-center my-1 pb-3">
+                                    <div class="card d-flex" id="card-hover">
+                                        <div class="card-head">
+                                            <img src="https://asset.kompas.com/crops/0D_xhh7m44sOuoVsEPwzj2VB440=/0x12:1000x679/1200x800/data/photo/2020/04/14/5e9573bc5d2d0.jpg"
+                                                class="card-img-top" alt="" />
+                                            <p id="card-category">Makanan</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="title-card">
+                                                <h5 class="fw-bold truncate-text">Rempeyek</h5>
+                                                <p class="subtitle-card" data-fulltext="Tidak Ada Deskripsi Produk"></p>
+                                            </div>
+                                            <div class="btn-group-harga d-flex justify-content-between mt-md-3">
+                                                <div class="harga">
+                                                    <p class="p-0 fw-semibold float-end mt-2 mb-0 price">Rp. 10,000</p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn btn-warning btn-harga mt-3">Titip Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 d-flex justify-content-center my-1 pb-3">
+                                    <div class="card d-flex" id="card-hover">
+                                        <div class="card-head">
+                                            <img src="https://asset.kompas.com/crops/0D_xhh7m44sOuoVsEPwzj2VB440=/0x12:1000x679/1200x800/data/photo/2020/04/14/5e9573bc5d2d0.jpg"
+                                                class="card-img-top" alt="" />
+                                            <p id="card-category">Makanan</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="title-card">
+                                                <h5 class="fw-bold truncate-text">Rempeyek</h5>
+                                                <p class="subtitle-card" data-fulltext="Tidak Ada Deskripsi Produk"></p>
+                                            </div>
+                                            <div class="btn-group-harga d-flex justify-content-between mt-md-3">
+                                                <div class="harga">
+                                                    <p class="p-0 fw-semibold float-end mt-2 mb-0 price">Rp. 10,000</p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn btn-warning btn-harga mt-3">Titip Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 d-flex justify-content-center my-1 pb-3">
+                                    <div class="card d-flex" id="card-hover">
+                                        <div class="card-head">
+                                            <img src="https://asset.kompas.com/crops/0D_xhh7m44sOuoVsEPwzj2VB440=/0x12:1000x679/1200x800/data/photo/2020/04/14/5e9573bc5d2d0.jpg"
+                                                class="card-img-top" alt="" />
+                                            <p id="card-category">Makanan</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="title-card">
+                                                <h5 class="fw-bold truncate-text">Rempeyek</h5>
+                                                <p class="subtitle-card" data-fulltext="Tidak Ada Deskripsi Produk"></p>
+                                            </div>
+                                            <div class="btn-group-harga d-flex justify-content-between mt-md-3">
+                                                <div class="harga">
+                                                    <p class="p-0 fw-semibold float-end mt-2 mb-0 price">Rp. 10,000</p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn btn-warning btn-harga mt-3">Titip Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 d-flex justify-content-center my-1 pb-3">
+                                    <div class="card d-flex" id="card-hover">
+                                        <div class="card-head">
+                                            <img src="https://asset.kompas.com/crops/0D_xhh7m44sOuoVsEPwzj2VB440=/0x12:1000x679/1200x800/data/photo/2020/04/14/5e9573bc5d2d0.jpg"
+                                                class="card-img-top" alt="" />
+                                            <p id="card-category">Makanan</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="title-card">
+                                                <h5 class="fw-bold truncate-text">Rempeyek</h5>
+                                                <p class="subtitle-card" data-fulltext="Tidak Ada Deskripsi Produk"></p>
+                                            </div>
+                                            <div class="btn-group-harga d-flex justify-content-between mt-md-3">
+                                                <div class="harga">
+                                                    <p class="p-0 fw-semibold float-end mt-2 mb-0 price">Rp. 10,000</p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn btn-warning btn-harga mt-3">Titip Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ... kartu lain serupa ... -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL FILTER (MOBILE ONLY) -->
+                <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Filter Produk</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="GET">
+                                    <div class="mb-3">
+                                        <label class="form-label">Kategori Produk</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="filter" id="modal-semua"
+                                                value="semua" checked>
+                                            <label class="form-check-label" for="modal-semua">Semua</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="filter"
+                                                id="modal-makanan" value="makanan">
+                                            <label class="form-check-label" for="modal-makanan">Makanan</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="filter"
+                                                id="modal-minuman" value="minuman">
+                                            <label class="form-check-label" for="modal-minuman">Minuman</label>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary">Terapkan Filter</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+    </main>
+
+    <!-- footer web -->
+    <footer class="footer mt-5" id="footer">
+        <div
+            class="container d-sm-flex justify-content-center flex-column align-items-sm-center pt-4 pb-4 flex-column flex-sm-row">
+            <p class="m-0 p-0 text-white fs-6 mb-2 mb-sm-0 text-center text-sm-start">© 2025 All Rights Reserved
+            </p>
+            <p class="m-0 p-0 text-white fs-6 mb-2 mb-sm-0 ms-sm-2 me-sm-2 d-none d-sm-block"> | </p>
+            <p class="m-0 p-0 text-white fs-6 mb-2 mb-sm-0 text-center text-sm-start">Contact CS:
+                <a href="https://wa.me/+62" class="text-white text-decoration-underline">+62 000-0000-000</a>
+            </p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+
+    <!-- boostrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- box icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Inisialisasi AOS -->
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+
+    <script>
+        const textContainers = document.querySelectorAll(".subtitle-card"); // ambil semua elemen dengan class subtitle-card
+        const maxChar = 134;
+
+        textContainers.forEach(container => {
+            const fullText = container.getAttribute("data-fulltext"); // ✅ penulisan benar
+            const displayText = fullText.length > maxChar
+                ? fullText.substring(0, maxChar) + "..."
+                : fullText;
+
+            container.innerText = displayText;
+        });
+
+    </script>
+
+
+</body>
+
+</html>

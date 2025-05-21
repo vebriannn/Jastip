@@ -1,0 +1,288 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap');
+
+/* Color Variables */
+:root {
+    --color-blue: #0774FA;
+    --color-orange: #faa907;
+    --hover-orange: #CA8907;
+    --color-grey: #414142;
+    --dim-grey: #696969;
+    --charcoal-gray: #414142;
+    --light-shade: #fdf8f8;
+    --shade-gray: #8f8f8f;
+    --lavender: #fff6f6;
+    --blue: #0774FA;
+    --lavender-mist: #f3f3f3;
+}
+
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif !important;
+}
+
+body {
+    background-color: var(--lavender-mist);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-ms-overflow-style {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+
+/* Section Styles */
+#section-pilih-kelas .container-fluid .content-kelas {
+    margin-top: 5rem;
+}
+
+/* Search Group */
+.search-group input,
+.search-group input:focus {
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    width: 260px;
+}
+
+#section-pilih-kelas .card {
+    width: 25rem;
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: auto;
+}
+
+#card-category {
+    position: absolute;
+    margin-top: -191px;
+    margin-left: 10px;
+    background-color: white;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+
+#section-pilih-kelas .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 201px;
+}
+
+#section-pilih-kelas .title-card h5 {
+    font-size: 18px;
+}
+
+#section-pilih-kelas .card-body {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#section-pilih-kelas .subtitle-card {
+    font-size: 14px;
+    
+}
+
+#section-pilih-kelas .btn-group-harga {
+    height: minimum;
+}
+
+#section-pilih-kelas .btn-group-harga p {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+}
+
+#section-pilih-kelas .btn-group-harga img {
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+#section-pilih-kelas .harga .price {
+    color: var(--color-blue) !important;
+    font-size: 20px;
+}
+
+
+#section-pilih-kelas .card .harga p:last-child {
+    color: var(--color-black);
+}
+
+
+#section-pilih-kelas .btn-harga {
+    width: 100%;
+    font-size: 20px;
+    background-color: var(--color-blue);
+    color: white;
+}
+
+
+/* Not Found Section */
+.not-found {
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.not-found img {
+    max-width: 25%;
+    height: auto;
+}
+
+.not-found p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.15rem;
+    align-items: center;
+    /* Pastikan semua item sejajar secara vertikal */
+}
+
+.page-item,
+.page-item-button {
+    margin: 0 0.2rem;
+}
+
+.page-item-button .page-link span {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+.page-item.disabled .page-link,
+.page-item-button.disabled .page-link {
+    color: var(--blue);
+    background-color: #eeeeee;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.page-link,
+.page-item-button .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    background-color: #eeeeee;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.page-link:hover,
+.page-item-button .page-link:hover {
+    transform: translateY(-5px);
+    color: #fff;
+    background-color: var(--blue);
+    border-color: var(--blue);
+    text-decoration: none;
+}
+
+.page-link span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+/* Price Styles */
+.harga p:first-child {
+    color: var(--dim-grey);
+}
+
+/* Package Styles */
+.paket {
+    color: var(--color-orange);
+    display: flex;
+    font-size: small;
+    font-weight: bolder;
+}
+
+.paket-item {
+    border: 1px solid var(--color-orange);
+    padding: 1px 5px;
+    margin: 0 5px 5px 0;
+    border-radius: 5px;
+}
+
+.btn-warning {
+    background-color: var(--color-blue) !important;
+    border-color: var(--color-blue) !important;
+}
+
+.search-group {
+    background-color: var(--color-pink);
+    padding: 10px 20px;
+    width: max-content;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-group input,
+.search-group input:focus {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-family: 'Nunito', sans-serif;
+    color: var(--dark-grey);
+    font-size: 16px;
+    width: 260px;
+}
+
+@media screen and (max-width: 1024px) {
+    .card-container {
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .row {
+        margin: 0 !important;
+    }
+
+    #course-card {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .pe-md-4 {
+        padding-right: 0px !important;
+    }
+
+    .not-found img {
+        max-width: 100% !important;
+    }
+}
+

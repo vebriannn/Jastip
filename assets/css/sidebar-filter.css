@@ -1,0 +1,184 @@
+/* font navbar */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap');
+
+/* variabel color */
+:root {
+    --color-blue: #0774FA;
+    --color-orange: #faa907;
+    --hover-orange: #CA8907;
+    --color-grey: #414142;
+    --dim-grey: #696969;
+    --charcoal-gray: #414142;
+    --light-shade: #fdf8f8;
+    --shade-gray: #8f8f8f;
+    --lavender: #fff6f6;
+    --blue: #0774FA;
+    --lavender-mist: #f0eaff;
+    --hr: #E0E0E0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif !important;
+}
+
+/* sidebar */
+.sidebar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    position: relative;
+    transition: top 0.4s ease-in-out;
+    z-index: -1;
+    overflow-y: auto;
+}
+
+
+#search-produk {
+    width: 100%;
+    border-radius: 20px;
+    padding: 4px 6px;
+    border-color: #0774FA;
+}
+
+hr {
+    margin: 0px !important;
+    border-radius: 30px;
+    border: 1px solid var(--hr) !important;
+    margin-bottom: 15px !important;
+    opacity: 1 !important;
+}
+
+h5 {
+    color: black;
+}
+
+.filter-paket img,
+.filter-kelas img {
+    width: 25px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: invert(100%);
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+}
+
+input[type="radio"]+label {
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Scrollbar sidebar */
+/* .sidebar::-webkit-scrollbar {
+    width: 6px;
+    margin-right: 100px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgb(177, 176, 176) ;
+    border-radius: 15px;
+} */
+
+/* General Styling */
+.mobile-filter {
+    background-color: var(--lavender);
+    z-index: 50;
+    top: 72px;
+}
+
+/* Search Input and Button Styling */
+.search {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.searchTerm {
+    width: 100%;
+    padding-right: 45px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.searchButton {
+    position: absolute;
+    top: 45%;
+    right: 16px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+}
+
+.searchButton i {
+    pointer-events: none;
+}
+
+/* Sidebar Styling */
+@media (max-width: 1024px) {
+    .sidebar {
+        position: fixed;
+        top: 125px;
+        left: 0;
+        transform: translateX(-100%);
+        height: 80vh;
+        width: 40%;
+        z-index: 10000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.show-sidebar {
+        transform: translateX(0);
+    }
+
+    .mobile-filter {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 80%;
+    }
+}
+
+
+.filter-sidebar {
+    top: 20px;
+    /* jarak dari atas viewport */
+    align-self: start;
+    /* supaya sticky bekerja dengan flexbox */
+    max-height: calc(100vh - 40px);
+    /* supaya tidak melebihi viewport */
+    overflow-y: auto;
+    /* jika isinya panjang bisa scroll sendiri */
+}

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="" type="image/x-icon" />
+    <title>Titip Aja</title>
+    <!-- boostrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+
+</head>
+
+<body>
+    <header class="ps-3 pe-3 pt-2 pb-2 w-100 fixed-top position-fixed bg-white">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg bg-transparent">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center">
+                        <a href="{{ route('home') }}" style="text-decoration: none;">
+                            <div class="brand-nemolab-icon d-flex align-items-center">
+                                <div class="title-navbar-brand ms-2 d-block">
+                                    <h2 class="m-0 p-0 fw-bold">Titip.Aja</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="">
+                            <img src="assets/img/icon-nav.png" alt="">
+                        </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <ul class="navbar-nav d-lg-flex align-items-lg-center gap-lg-5 ps-xl-5 mx-lg-auto">
+                            <a href="#section-hero-img"
+                                class="text-decoration-none pb-1 ms-3 mt-3 ms-lg-0 mt-lg-0 pb-lg-0">Home</a>
+                            <a href="shop.html" class="text-decoration-none pb-1 ms-3 ms-lg-0 pb-lg-0">Produk</a>
+                            <a href="#section-pilih-kursus"
+                                class="text-decoration-none pb-1 ms-3 ms-lg-0 pb-lg-0">Keunggulan</a>
+                            <a href="#section-testimoni-kelas"
+                                class="text-decoration-none pb-1 ms-3 ms-lg-0 pb-lg-0">Testimonial</a>
+                        </ul>
+                        <div class="profile-auth mr-lg-auto d-none">
+                            <div class="dropdown d-flex justify-content-end">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown">
+                                    <span class="fw-bold">
+                                        Devita
+                                    </span>
+                                    <img width="48" height="48"
+                                        src="https://img.icons8.com/color/48/circled-user-female-skin-type-1-2--v1.png"
+                                        alt="circled-user-female-skin-type-1-2--v1" />
+                                    <!-- <img width="48" height="48" src="https://img.icons8.com/color/48/circled-user-male-skin-type-1-2--v1.png" alt="circled-user-male-skin-type-1-2--v1"/> -->
+                                </button>
+
+                                <ul class="dropdown-menu w-100 mt-2 dropdown-logout">
+                                    <li><a class="dropdown-item" href="{{ route('member.transaction') }}">Transaksi
+                                            Saya</a></li>
+                                    <li class="border-bottom pb-3"><a class="dropdown-item" href="">Pengaturan</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a class="dropdown-item" href="" id="logout-btn">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="register-login d-flex align-items-center justify-content-end gap-3 ">
+                            <a href="" class="btn px-4 py-2">Daftar</a>
+                            <a href="" class="btn btn-primary px-4 py-2">Masuk</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+        <!-- Section Hero -->
+        <section class="section-hero-img d-flex align-items-center mb-5" id="section-hero-img">
+            <div class="row">
+                <div class="col-md-6 mt-lg-5" data-aos="zoom-out">
+                    <div class="text-center text-md-start me-md-3">
+                        <h1 class="fw-bold"> Titip Barang Antar Kota <br>Mudah & Aman</h1>
+                        <p>Titip oleh-oleh, barang langka, atau produk lokal dari berbagai kota.
+                            Tinggal pesan, bayar, dan tunggu sampai barang sampai rumah!</p>
+                        <div class="d-flex align-items-center avatar-btn-group">
+                            <a href="{{ route('member.course') }}" class="btn btn-primary px-4"
+                                style="padding: 14px">Mulai
+                                Titip</a>
+                            <div class="d-flex flex-column mt-md-0 mt-sm-3 ms-md-4 ms-sm-0 flex-important">
+                                <div class="avatar-group">
+                                    <img src="assets/img/dummy-profile/dumy-1.jpg" class="rounded-5 ms-1"
+                                        style="width: 30px; height: 30px;">
+                                    <img src="assets/img/dummy-profile/dumy-2.jpg" class="rounded-5"
+                                        style="width: 30px; height: 30px;">
+                                    <img src="assets/img/dummy-profile/dumy-4.jpg" class="rounded-5"
+                                        style="width: 30px; height: 30px;">
+                                    <img src="assets/img/dummy-profile/dumy-5.jpg" class="rounded-5"
+                                        style="width: 30px; height: 30px;">
+                                    <img src="assets/img/dummy-profile/dumy-6.jpg" class="rounded-5"
+                                        style="width: 30px; height: 30px;">
+                                </div>
+                                <p class="mt-1 mb-0 fs-6">Lebih dari <span class="text-black">100+</span> Orang telah
+                                    menggunakan jasa kami
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center" data-aos="zoom-out"
+                    data-aos-delay="100">
+                    <img src="assets/img/hero-section.jpg" alt="" width="400px" height="auto"
+                        style="border-radius: 20px;">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-pilh-kelas" id="section-pilih-kelas" data-aos="fade-up">
+            <div class="container-fluid p-0 m-0">
+                <div class="title-pilih-kelas d-flex justify-content-between align-items-center pt-5">
+                    <div class="title-group ">
+                        <h1 class="title-kelas fw-bold" style="margin-top: 80px;">Rekomendasi Titipan Untuk Kamu</h1>
+                        <p class="subtitle-kelas"> Kami pilihkan produk terbaik dari berbagai kota <br> tinggal pilih,
+                            titip, dan tunggu di
+                            rumah.</p>
+                    </div>
+                    <a href="{{ route('member.course') }}"
+                        class="btn btn-primary fw-bold d-lg-block d-sm-none sm-none">Lihat
+                        Produk Lainnya</a>
+                </div>
+                <div class="content-kelas mt-2 mt-md-4">
+                    <div class="row m-0 p-0 ">
+
+                        <div class="col-md-6 col-xl-3 col-lg-4 col-12 d-flex justify-content-center my-2 pb-2">
+                            <div class="card d-flex" id="card-hover">
+                                <div class="card-head ">
+                                    <img src="https://asset.kompas.com/crops/0D_xhh7m44sOuoVsEPwzj2VB440=/0x12:1000x679/1200x800/data/photo/2020/04/14/5e9573bc5d2d0.jpg"
+                                        class="card-img-top" alt="" />
+                                    <p id="card-category">Makanan</p>
+                                </div>
+                                <div class="card-body">
+                                    <div class="title-card">
+                                        <h5 class="fw-bold truncate-text">
+                                            Rempeyek
+                                        </h5>
+                                        <p class="subtitle-card" data-fulltext="Tidak Ada Deskripsi Produk"></p>
+                                    </div>
+                                    <div class="btn-group-harga d-flex justify-content-between mt-md-3">
+                                        <div class="harga">
+                                            <p class="p-0 fw-semibold float-end mt-2 mb-0 price">
+                                                Rp. 10,000
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn btn-warning btn-harga mt-3">Titip Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 col-lg-4 col-12 d-flex justify-content-center my-2 pb-2">
+                            <div class="card d-flex" id="card-hover">
+                                <div class="card-head ">
+                                    <img src="https://asset.kompas.com/crops/0D_xhh7m44sOuoVsEPwzj2VB440=/0x12:1000x679/1200x800/data/photo/2020/04/14/5e9573bc5d2d0.jpg"
+                                        class="card-img-top" alt="" />
+                                    <p id="card-category">Makanan</p>
+                                </div>
+                                <div class="card-body">
+                                    <div class="title-card">
+                                        <h5 class="fw-bold truncate-text">
+                                            Rempeyek
+                                        </h5>
+                                        <p class="subtitle-card"
+                                            data-fulltext="Rempeyek merupakan makanan tradisional Indonesia yang termasuk jenis gorengan atau kerupuk">
+                                        </p>
+                                    </div>
+                                    <div class="btn-group-harga d-flex justify-content-between mt-md-3">
+                                        <div class="harga">
+                                            <p class="p-0 fw-semibold float-end mt-2 mb-0 price">
+                                                Rp. 10,000
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn btn-warning btn-harga mt-3">Titip Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-pilih-kursus" id="section-pilih-kursus" data-aos="fade-up">
+            <div class="container-fluid p-5">
+                <div class="title-pilih-kursus" style="margin-top: 130px;">
+                    <h1 class="title-kelas fw-bold">Mengapa Harus Di Titip Aja?</h1>
+                </div>
+                <div class="d-flex flex-md-row card-group gap-3 mt-lg-4">
+                    <div class="card p-3">
+                        <h4>Titip Belanja, Tanpa Ribet</h4>
+                        <p>Mau barang dari kota lain? Titip aja lewat agent kami. Dari event, toko lokal,
+                            hingga oleh-oleh daerah, semua bisa kami bantu belikan.</p>
+                    </div>
+                    <div class="card p-3">
+                        <h4>Satu Klik, Barang Datang</h4>
+                        <p>Titip barang dari luar kota hanya lewat satu platform. Proses cepat, jastiper terpercaya.</p>
+                    </div>
+                    <div class="card p-3">
+                        <h4>Gak Ribet, Gak Pusing</h4>
+                        <p>Titip barang dari mana saja di Indonesia. Cukup pesan, tunggu di rumah semua kami
+                            yang urus.</p>
+                    </div>
+                    <div class="card p-3">
+                        <h4>Titip Mudah, Tanpa Drama</h4>
+                        <p> Dari oleh-oleh khas sampai barang langka di toko kota lain semuanya bisa dititip tanpa
+                            ribet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section 5 -->
+        <section class="section-testimoni-kelas mt-5 me-0" id="section-testimoni-kelas" data-aos="fade-up">
+            <div class="container-fluid row p-0 m-0">
+                <div class="testimoni-title pb-5 d-flex">
+                    <h1 class="fw-bold ms-3">Selangkah Lebih Praktis dengan <br> Jasa Titip Terpercaya!!</h1>
+                    <p class="float-end">
+                        Titip beli barang impianmu dengan mudah dan aman. Banyak pelanggan puas dengan layanan kami.
+                    </p>
+                </div>
+                <div class="row  p-0" id="testimonials">
+                    <div class="col-md-12 p-0 carousel-container">
+                        <div class="carousel-track d-flex" style="margin-left: -500px">
+
+                            <div class="col-xl-2 col-md-3 col-sm-6 carousel-run ms-3 d-flex justify-content-center">
+                                <div class="card mb-4">
+                                    <div class="card-body row">
+                                        <div class="col-md-12">
+                                            <p class="card-text p-0 m-0">Jasa titip ini sangat membantu saya mendapatkan
+                                                barang langka tanpa ribet. Prosesnya cepat dan terpercaya!
+                                            </p>
+                                            <hr>
+                                            <div class="card-head d-flex align-items-center">
+                                                <img src="https://img.icons8.com/color/48/circled-user-male-skin-type-1-2--v1.png"
+                                                    width="
+                                                    45" height="45" style="border-radius: 50%; object-fit:cover"
+                                                    alt="">
+                                                <div class="name ms-3">
+                                                    <h5 class="card-title m-0 fw-bold">Rahmat Hidayat Sianturi</h5>
+                                                    <p class="m-0">Costumer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-2 col-md-3 col-sm-6 carousel-run ms-3 d-flex justify-content-center">
+                                <div class="card mb-4">
+                                    <div class="card-body row">
+                                        <div class="col-md-12">
+                                            <p class="card-text p-0 m-0"> Pengiriman cepat dan barang sampai dalam
+                                                kondisi bagus. Saya pasti pakai jasa titip ini lagi!</p>
+                                            <hr>
+                                            <div class="card-head d-flex align-items-center">
+                                                <img src="https://img.icons8.com/color/48/circled-user-female-skin-type-1-2--v1.png"
+                                                    width="
+                                                    45" height="45" style="border-radius: 50%; object-fit:cover"
+                                                    alt="">
+                                                <div class="name ms-3">
+                                                    <h5 class="card-title m-0 fw-bold">Ayu Lestari</h5>
+                                                    <p class="m-0">Costumer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-2 col-md-3 col-sm-6 carousel-run ms-3 d-flex justify-content-center">
+                                <div class="card mb-4">
+                                    <div class="card-body row">
+                                        <div class="col-md-12">
+                                            <p class="card-text p-0 m-0">Harga kompetitif dan pelayanan sangat ramah.
+                                                Barang titipan saya datang tepat waktu tanpa masalah.
+                                            </p>
+                                            <hr>
+                                            <div class="card-head d-flex align-items-center">
+                                                <img src="https://img.icons8.com/color/48/circled-user-male-skin-type-1-2--v1.png"
+                                                    width="
+                                                    45" height="45" style="border-radius: 50%; object-fit:cover"
+                                                    alt="">
+                                                <div class="name ms-3">
+                                                    <h5 class="card-title m-0 fw-bold">Budi Prasetyo</h5>
+                                                    <p class="m-0">Costumer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-2 col-md-3 col-sm-6 carousel-run ms-3 d-flex justify-content-center">
+                                <div class="card mb-4">
+                                    <div class="card-body row">
+                                        <div class="col-md-12">
+                                            <p class="card-text p-0 m-0">Sangat membantu saya yang sulit bepergian.
+                                                Jastip ini benar-benar solusi tepat!</p>
+                                            <hr>
+                                            <div class="card-head d-flex align-items-center">
+                                                <img src="https://img.icons8.com/color/48/circled-user-female-skin-type-1-2--v1.png"" width="
+                                                    45" height="45" style="border-radius: 50%; object-fit:cover" alt="">
+                                                <div class="name ms-3">
+                                                    <h5 class="card-title m-0 fw-bold">Intan Permata</h5>
+                                                    <p class="m-0">Costumer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-2 col-md-3 col-sm-6 carousel-run ms-3 d-flex justify-content-center">
+                                <div class="card mb-4">
+                                    <div class="card-body row">
+                                        <div class="col-md-12">
+                                            <p class="card-text p-0 m-0"> Mudah digunakan dan sangat terpercaya. Saya
+                                                merasa aman menitipkan barang di sini.</p>
+                                            <hr>
+                                            <div class="card-head d-flex align-items-center">
+                                                <img src="https://img.icons8.com/color/48/circled-user-male-skin-type-1-2--v1.png"
+                                                    width="
+                                                    45" height="45" style="border-radius: 50%; object-fit:cover"
+                                                    alt="">
+                                                <div class="name ms-3">
+                                                    <h5 class="card-title m-0 fw-bold">Dimas Nugraha</h5>
+                                                    <p class="m-0">Costumer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-2 col-md-3 col-sm-6 carousel-run ms-3 d-flex justify-content-center">
+                                <div class="card mb-4">
+                                    <div class="card-body row">
+                                        <div class="col-md-12">
+                                            <p class="card-text p-0 m-0"> Pelayanan ramah dan informatif. Barang saya
+                                                datang tepat waktu dan sesuai pesanan.</p>
+                                            <hr>
+                                            <div class="card-head d-flex align-items-center">
+                                                <img src="https://img.icons8.com/color/48/circled-user-female-skin-type-1-2--v1.png"" width="
+                                                    45" height="45" style="border-radius: 50%; object-fit:cover" alt="">
+                                                <div class="name ms-3">
+                                                    <h5 class="card-title m-0 fw-bold">Nadia Safitri</h5>
+                                                    <p class="m-0">Costumer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section 5 -->
+
+    </main>
+
+    <!-- footer web -->
+    <footer class="footer" id="footer">
+        <div
+            class="container d-sm-flex justify-content-center flex-column align-items-sm-center pt-4 pb-4 flex-column flex-sm-row">
+            <p class="m-0 p-0 text-white fs-6 mb-2 mb-sm-0 text-center text-sm-start">© 2025 All Rights Reserved
+            </p>
+            <p class="m-0 p-0 text-white fs-6 mb-2 mb-sm-0 ms-sm-2 me-sm-2 d-none d-sm-block"> | </p>
+            <p class="m-0 p-0 text-white fs-6 mb-2 mb-sm-0 text-center text-sm-start">Contact CS:
+                <a href="https://wa.me/+62" class="text-white text-decoration-underline">+62 000-0000-000</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- end footer -->
+
+
+    <!-- boostrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- box icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Inisialisasi AOS -->
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggler = document.querySelector('.dropdown-logout');
+            const registerBtn = document.getElementById('dropdownMenuButton1');
+
+            function LinkLogoutFunc() {
+                if (window.innerWidth < 992) {
+
+                    navbarToggler.style.display = 'none';
+
+                    registerBtn.setAttribute('data-bs-toggle', 'modal');
+                    registerBtn.setAttribute('data-bs-target', '#targetModalLogin');
+
+                } else {
+                    navbarToggler.style.display = 'block';
+
+                    registerBtn.setAttribute('data-bs-toggle', 'dropdown');
+                }
+                window.addEventListener('resize', LinkLogoutFunc())
+            }
+        });
+    </script>
+    <script>
+        const textContainers = document.querySelectorAll(".subtitle-card"); // ambil semua elemen dengan class subtitle-card
+        const maxChar = 134;
+
+        textContainers.forEach(container => {
+            const fullText = container.getAttribute("data-fulltext"); // ✅ penulisan benar
+            const displayText = fullText.length > maxChar
+                ? fullText.substring(0, maxChar) + "..."
+                : fullText;
+
+            container.innerText = displayText;
+        });
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = [
+                { id: "section-hero-img", linkHref: "#section-hero-img" },           // Home
+                { id: "section-pilih-kursus", linkHref: "#section-pilih-kursus" },   // Keunggulan
+                { id: "section-testimoni-kelas", linkHref: "#section-testimoni-kelas" } // Testimoni
+            ];
+
+            const navLinks = document.querySelectorAll(".navbar-nav a");
+
+            function onScroll() {
+                const scrollY = window.pageYOffset;
+
+                sections.forEach(section => {
+                    const currentSection = document.getElementById(section.id);
+                    if (!currentSection) return;
+
+                    const sectionTop = currentSection.offsetTop - 120;
+                    const sectionHeight = currentSection.offsetHeight;
+
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href") === section.linkHref) {
+                                link.classList.add("active");
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", onScroll);
+        });
+    </script>
+
+</body>
+
+</html>
