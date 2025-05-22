@@ -33,7 +33,7 @@
     height: 80vh;
     position: relative;
     transition: top 0.4s ease-in-out;
-    z-index: -1;
+
     overflow-y: auto;
 }
 

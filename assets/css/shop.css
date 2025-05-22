@@ -90,9 +90,10 @@ html::-ms-overflow-style {
     justify-content: space-around;
     flex-direction: column;
 }
+
 #section-pilih-kelas .subtitle-card {
     font-size: 14px;
-    
+
 }
 
 #section-pilih-kelas .btn-group-harga {
@@ -285,4 +286,3 @@ html::-ms-overflow-style {
         max-width: 100% !important;
     }
 }
-

@@ -4,15 +4,16 @@
 :root {
     --dim-grey: #696969;
     --charcoal-gray: #414142;
-    --dark-blue : #033169;
+    --dark-blue: #033169;
 }
 
-#footer  {
+#footer {
     background-color: #033169;
+    z-index: 9999;
+    position: relative;
 }
 
-#footer .container-fluid .brand-nemolab-icon .title-navbar-brand p
- {
+#footer .container-fluid .brand-nemolab-icon .title-navbar-brand p {
     color: white;
     font-family: 'Nunito', sans-serif !important;
     line-height: 1.2;
@@ -50,7 +51,8 @@
 
 /* Gaya umum untuk semua <a> agar sesuai dengan <p> */
 #footer .container-fluid .content a {
-    display: block; /* Setiap <a> menjadi elemen blok, tampil satu per baris */
+    display: block;
+    /* Setiap <a> menjadi elemen blok, tampil satu per baris */
     margin-bottom: 10px;
     color: white;
     font-family: 'Nunito', sans-serif !important;
@@ -59,7 +61,8 @@
 }
 
 #footer .copyright a {
-    text-decoration: underline; /* Berikan underline */
+    text-decoration: underline;
+    /* Berikan underline */
     font-weight: 600 !important;
     color: white !important;
 }
